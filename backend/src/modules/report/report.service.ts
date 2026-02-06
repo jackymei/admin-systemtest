@@ -28,7 +28,7 @@ export class ReportService {
   }
 
   async getTrendData(days: number = 30) {
-    const data = []
+    const data: any[] = []
     const now = new Date()
 
     for (let i = days - 1; i >= 0; i--) {

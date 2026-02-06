@@ -14,8 +14,8 @@ export class NotificationService {
     return message.save()
   }
 
-  async createBulk(messages: any[]): Promise<Message[]> {
-    return this.messageModel.insertMany(messages)
+  async createBulk(messages: any[]): Promise<any[]> {
+    return this.messageModel.insertMany(messages) as any
   }
 
   async findAll(query: any = {}) {
