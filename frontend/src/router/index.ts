@@ -22,6 +22,24 @@ const routes: RouteRecordRaw[] = [
         component: () => import('@/views/dashboard/index.vue'),
         meta: { title: '仪表盘', requiresAuth: true },
       },
+      {
+        path: 'system/user',
+        name: 'UserManagement',
+        component: () => import('@/views/system/user/index.vue'),
+        meta: { title: '用户管理', requiresAuth: true },
+      },
+      {
+        path: 'log',
+        name: 'LogMonitoring',
+        component: () => import('@/views/log/index.vue'),
+        meta: { title: '日志监控', requiresAuth: true },
+      },
+      {
+        path: 'notification',
+        name: 'NotificationCenter',
+        component: () => import('@/views/notification/index.vue'),
+        meta: { title: '消息中心', requiresAuth: true },
+      },
     ],
   },
 ]

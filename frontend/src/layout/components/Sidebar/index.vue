@@ -19,6 +19,14 @@
         <el-menu-item index="/system/role">角色管理</el-menu-item>
         <el-menu-item index="/system/config">系统配置</el-menu-item>
       </el-sub-menu>
+      <el-menu-item index="/log">
+        <el-icon><Document /></el-icon>
+        <span>日志监控</span>
+      </el-menu-item>
+      <el-menu-item index="/notification">
+        <el-icon><Bell /></el-icon>
+        <span>消息中心</span>
+      </el-menu-item>
     </el-menu>
   </div>
 </template>
@@ -28,7 +36,7 @@ import { ref, computed } from 'vue'
 import { useRoute } from 'vue-router'
 
 const route = useRoute()
-const collapsed = ref(false)
+const collapsed = defineModel<boolean>('collapsed')
 const activeMenu = computed(() => route.path)
 </script>
 
@@ -36,7 +44,7 @@ const activeMenu = computed(() => route.path)
 .sidebar {
   width: 220px;
   height: 100%;
-  background: #304156;
+  background: var(--sidebar-bg);
   transition: width 0.3s;
 }
 
@@ -52,11 +60,11 @@ const activeMenu = computed(() => route.path)
 
 :deep(.el-menu) {
   border-right: none;
-  background: #304156;
+  background: var(--sidebar-bg);
 }
 
 :deep(.el-menu-item), :deep(.el-sub-menu__title) {
-  color: #bfcbd9;
+  color: var(--sidebar-text);
 }
 
 :deep(.el-menu-item:hover), :deep(.el-sub-menu__title:hover) {
@@ -65,6 +73,6 @@ const activeMenu = computed(() => route.path)
 
 :deep(.el-menu-item.is-active) {
   background: #263445;
-  color: #409eff;
+  color: var(--sidebar-active);
 }
 </style>

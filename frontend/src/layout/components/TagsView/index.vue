@@ -14,8 +14,8 @@
 <style scoped>
 .tags-view {
   height: 34px;
-  background: white;
-  border-bottom: 1px solid #e6e6e6;
+  background: var(--bg-base);
+  border-bottom: 1px solid var(--border-light);
 }
 
 .tags-item {
@@ -27,19 +27,19 @@
 }
 
 a {
-  color: #495060;
+  color: var(--text-regular);
   text-decoration: none;
   padding: 0 8px;
   height: 26px;
   line-height: 26px;
-  border: 1px solid #d8dce5;
+  border: 1px solid var(--border-base);
   border-radius: 2px;
-  background: white;
+  background: var(--bg-base);
 }
 
 a.router-link-active {
-  background: #409eff;
+  background: var(--primary-color);
   color: white;
-  border-color: #409eff;
+  border-color: var(--primary-color);
 }
 </style>
