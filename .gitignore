@@ -108,8 +108,12 @@
 **/.env
 **/.env.local
 **/.env.*.local
-*.pem
-*.key
+.pem
+.key
+
+# Build outputs
+frontend/dist
+backend/dist
 
 # Temporary files
 *.tmp
